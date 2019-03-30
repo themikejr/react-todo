@@ -1,4 +1,9 @@
 import React, { Component } from 'react';
+import AppBar from '@material-ui/core/AppBar'
+import Typography from '@material-ui/core/Typography'
+import Toolbar from '@material-ui/core/Toolbar';
+import Paper from '@material-ui/core/Paper';
+
 import logo from './logo.svg';
 import './App.css';
 
@@ -6,20 +11,21 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <AppBar position="static">
+          <Toolbar>
+            <Typography variant="title" color="inherit">
+              Venkman's Todo List
+            </Typography>
+          </Toolbar>
+        </AppBar>
+        <Paper>
+          <Typography variant="h5" component="h3">
+            Everyone wants to get things done.
+          </Typography>
+          <Typography component="p">
+            The first step to getting things done is to wrote down everything you think might need doing.  
+          </Typography>
+        </Paper>
       </div>
     );
   }
